@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/compadding"
+    android:paddingStart="@dimen/compadding"
+    android:paddingTop="@dimen/compadding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/wthumb"
+            android:layout_height="@dimen/hthumb"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/str_postthumb" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/thumbnail"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/subreddit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/compadding"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/xtrasmall"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/compadding"
+                android:paddingStart="@dimen/compadding"
+                android:textColor="@color/primary_text" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/lout_postaction" />
+</LinearLayout>

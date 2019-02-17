@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/hdiv"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/enddiv"
+        android:background="@color/item_div" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/compadding"
+        android:layout_marginTop="@dimen/compadding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/idcreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/xtrasmall"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/actmargin"
+    android:layout_marginStart="@dimen/actmargin"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context="com.capstone.jarr.interfaces.ui_list">
+
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/post_list"
+        android:name="com.capstone.jarr.PostListFragment"
+        android:layout_width="@dimen/smallest"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

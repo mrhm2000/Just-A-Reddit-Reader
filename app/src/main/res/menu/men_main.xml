@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_globsearch"
+        android:title="@string/str_search"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/sort_order"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/str_sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/hot"
+                    android:title="@string/str_shot" />
+                <item
+                    android:id="@+id/latest"
+                    android:title="@string/str_snew" />
+                <item
+                    android:id="@+id/top"
+                    android:title="@string/str_stop" />
+                <item
+                    android:id="@+id/controversial"
+                    android:title="@string/str_scontro" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:icon="@drawable/ic_setting"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/manage_srs"
+                android:title="@string/str_manage" />
+
+            <item
+                android:id="@+id/account"
+                android:title="@string/str_profile" />
+            </menu>
+    </item>
+</menu>

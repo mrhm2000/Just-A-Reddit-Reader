@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.capstone.jarr">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".frontapp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/str_app"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".interfaces.ui_list"
+            android:label="@string/str_app"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".interfaces.ui_detail"
+            android:label="@string/str_post_detail"
+            android:parentActivityName=".interfaces.ui_list">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.capstone.jarr.interfaces.ui_list" />
+        </activity>
+        <activity
+            android:name=".interfaces.ui_login"
+            android:label="@string/str_mainscreen" />
+
+        <meta-data
+            android:name="net.dean.jraw.REDDIT_USERNAME"
+            android:value="myRedUname" />
+
+        <activity
+            android:name=".interfaces.ui_search"
+            android:configChanges="orientation|screenSize"
+            android:label=""
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".interfaces.ui_manage"
+            android:label="@string/str_manage" />
+
+        <activity
+            android:name=".interfaces.ui_profile"
+            android:label="@string/str_profile"
+            android:parentActivityName=".interfaces.ui_list">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.capstone.jarr.interfaces.ui_list" />
+        </activity>
+
+        <service
+            android:name=".concurrent.con_intentpost"
+            android:exported="false" />
+
+        <provider
+            android:name=".data.dat_provider"
+            android:authorities="com.capstone.jarr"
+            android:exported="false" />
+
+        <service
+            android:name=".widget.wid_service"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <service
+            android:name=".concurrent.con_jobpost"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name=".widget.wid_provider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.capstone.jarr.int_dataupdate" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/str_testid"/>
+
+    </application>
+
+</manifest>

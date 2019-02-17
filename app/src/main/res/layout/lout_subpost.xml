@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/comargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/favorite"
+        android:layout_width="@dimen/shortbtnwidth"
+        android:layout_height="@dimen/shortbtnheight"
+        android:layout_margin="@dimen/comargin"
+        android:layout_marginLeft="@dimen/actmargin"
+        android:clickable="true"
+        android:contentDescription="@string/str_favdesc"
+        android:focusable="true"
+        android:src="@drawable/ic_leastfav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/subscribe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="@dimen/wsubred"
+        android:layout_height="@dimen/hpostsub"
+        android:layout_margin="@dimen/comargin"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintLeft_toRightOf="@+id/favorite"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/no_subscribers"
+        android:layout_width="@dimen/wsubred"
+        android:layout_height="@dimen/hpostsub"
+        android:layout_margin="@dimen/comargin"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/favorite"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.866" />
+
+</android.support.constraint.ConstraintLayout>

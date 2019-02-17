@@ -1,0 +1,4 @@
+<resources>
+    <string name="strlibname">JRAW-Android</string>
+    <string name="leadfile">net.dean.jraw.leadfile</string>
+</resources>
